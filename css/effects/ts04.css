@@ -1,0 +1,11 @@
+﻿/* TS04: Закругление при наведении */
+.effect-rounded-hover {
+  border-radius: 0;
+  transition: border-radius 0.4s ease, transform 0.4s ease;
+  overflow: hidden;
+  will-change: border-radius, transform;
+}
+.effect-rounded-hover:hover {
+  border-radius: clamp(40px, 10vw, 150px);
+  transform: scale(0.98);
+}

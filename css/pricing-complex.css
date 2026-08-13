@@ -1,0 +1,442 @@
+﻿/* ==================== COMPLEX PRICING SECTION ==================== */
+.pricing-complex {
+  padding: 100px 0;
+  background: #f8f9fb;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.pricing-complex__header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+/* ===== 1. CALCULATOR ===== */
+.pricing-calc {
+  margin-bottom: 80px;
+}
+
+.pricing-calc__glass {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(11, 19, 29, 0.05);
+  border: 1px solid rgba(11, 19, 29, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-calc__glass::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(169, 210, 211, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.pricing-calc__title {
+  font-size: 28px;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.pricing-calc__desc {
+  color: rgba(11, 19, 29, 0.6);
+  margin-bottom: 32px;
+}
+
+.pricing-calc__body {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+@media(min-width: 768px) {
+  .pricing-calc__body {
+    flex-direction: row;
+    gap: 48px;
+  }
+}
+
+.calc-step {
+  flex: 1;
+}
+
+.calc-step label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.calc-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.calc-btn {
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(11, 19, 29, 0.1);
+  background: transparent;
+  color: var(--color-primary);
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.calc-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.calc-btn.active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(169, 210, 211, 0.4);
+}
+
+/* Range Slider */
+.calc-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.calc-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+}
+
+.calc-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.calc-range-labels {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(11, 19, 29, 0.5);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pricing-calc__result {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(11, 19, 29, 0.05);
+}
+
+@media(min-width: 768px) {
+  .pricing-calc__result {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.result-label {
+  font-size: 16px;
+  color: rgba(11, 19, 29, 0.6);
+  font-weight: 500;
+}
+
+.result-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.result-value span {
+  color: var(--color-accent);
+}
+
+/* ===== 2. PACKAGE DEALS ===== */
+.pricing-packages {
+  margin-bottom: 80px;
+}
+
+.packages-title {
+  text-align: center;
+  font-size: 32px;
+  color: var(--color-primary);
+  margin-bottom: 40px;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media(min-width: 1024px) {
+  .packages-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.package-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 32px;
+  box-shadow: 0 10px 30px rgba(11, 19, 29, 0.03);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(11, 19, 29, 0.08);
+}
+
+.package-card__accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(11, 19, 29, 0.1);
+}
+
+.package-card--highlight {
+  background: var(--color-primary);
+  color: #fff;
+  transform: scale(1.02);
+  box-shadow: 0 20px 50px rgba(11, 19, 29, 0.15);
+}
+
+.package-card--highlight:hover {
+  transform: scale(1.02) translateY(-5px);
+}
+
+.package-card--highlight .package-card__accent {
+  background: var(--color-accent);
+}
+
+.package-card__badge {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 6px 40px;
+  transform: rotate(45deg);
+  letter-spacing: 1px;
+}
+
+.package-card h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: inherit;
+}
+
+.package-card--highlight h4 {
+  color: #fff;
+}
+
+.package-card__desc {
+  font-size: 15px;
+  color: rgba(11, 19, 29, 0.6);
+  margin-bottom: 24px;
+  min-height: 44px;
+}
+
+.package-card--highlight .package-card__desc {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.package-card__price {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: var(--color-primary);
+}
+
+.package-card--highlight .package-card__price {
+  color: #fff;
+}
+
+.package-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  flex: 1;
+}
+
+.package-card__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.package-card--highlight .package-card__list li {
+  color: #fff;
+}
+
+.package-card__list svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+
+.package-card .btn {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+/* ===== 3. DETAILED TABS ===== */
+.pricing-tabs {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(11, 19, 29, 0.03);
+}
+
+.tabs-title {
+  text-align: center;
+  font-size: 28px;
+  color: var(--color-primary);
+  margin-bottom: 32px;
+}
+
+.tabs-header {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(11, 19, 29, 0.05);
+  scrollbar-width: none;
+}
+
+.tabs-header::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  padding: 12px 24px;
+  background: transparent;
+  border: none;
+  border-radius: 50px;
+  color: rgba(11, 19, 29, 0.6);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  color: var(--color-primary);
+  background: rgba(11, 19, 29, 0.03);
+}
+
+.tab-btn.active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.tabs-content {
+  position: relative;
+  min-height: 250px;
+}
+
+.tab-pane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(10px);
+}
+
+.tab-pane.active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.price-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px dashed rgba(11, 19, 29, 0.1);
+}
+
+.price-row:last-child {
+  border-bottom: none;
+}
+
+.price-row span:first-child {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-primary);
+  padding-right: 20px;
+}
+
+.price-row span:last-child {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+
+
+.pricing-card:hover 
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+

@@ -1,0 +1,59 @@
+﻿/* ==================== TEAM PARALLAX SHOWCASE ==================== */
+.team-gallery-showcase {
+  position: relative;
+  background-image: url('../img/doctors/photos/IMG_9388.JPG');
+  /* Большая командная фотография на диване */
+  background-size: cover;
+  background-position: center 20%;
+  /* background-attachment removed for performance */
+  /* Эффект параллакса */
+  padding: clamp(100px, 15vw, 160px) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.team-gallery-showcase::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 19, 29, 0.75);
+  /* Темный слой для читаемости текста */
+  z-index: 1;
+}
+
+.team-gallery-showcase .container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-gallery-showcase .section-header {
+  margin-bottom: 0;
+  align-items: center;
+  text-align: center;
+}
+
+.team-gallery-showcase .section-badge {
+  color: var(--color-accent);
+}
+
+.team-gallery-showcase .section-title {
+  color: var(--color-white);
+}
+
+.team-gallery-showcase .section-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 600px;
+}
+
+/* Фикс для iOS (/* background-attachment removed for performance */ там глючит) */
+@supports (-webkit-touch-callout: none) {
+  .team-gallery-showcase {
+    background-attachment: scroll;
+  }
+}

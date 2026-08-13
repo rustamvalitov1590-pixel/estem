@@ -1,0 +1,127 @@
+﻿/* ==========================================================================
+   TECHNOLOGIES SHOWCASE (БЛОК 5)
+   ========================================================================== */
+
+.tech-showcase {
+  background-color: var(--color-primary);
+  padding: clamp(80px, 10vw, 120px) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Декоративные паттерны на фоне для премиальности */
+.tech-showcase::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(169, 210, 211, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.tech-showcase .section-header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: clamp(40px, 6vw, 64px);
+}
+
+/* Сетка (Bento Grid) */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 640px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Карточки технологий */
+.tech-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  
+}
+
+.tech-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-accent);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px -10px rgba(169, 210, 211, 0.15), inset 0 0 20px rgba(169, 210, 211, 0.05);
+}
+
+/* 3D Иконки */
+.tech-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  background-color: rgba(169, 210, 211, 0.15); /* Soft transparent accent */
+  border-radius: 50%; /* Circle */
+  color: var(--color-accent);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, color 0.3s ease;
+}
+
+.tech-icon-svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--color-accent);
+  transition: stroke 0.3s ease;
+}
+
+.tech-card:hover .tech-icon {
+  transform: rotate(15deg) scale(1.1);
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.tech-card:hover .tech-icon-svg {
+  stroke: var(--color-primary);
+}
+
+/* Контент карточки */
+.tech-card__content {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+}
+
+.tech-card__content h3 {
+  font-family: var(--font-primary);
+  font-size: clamp(20px, 2vw, 24px);
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--color-white);
+  line-height: 1.2;
+}
+
+.tech-card__content p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+

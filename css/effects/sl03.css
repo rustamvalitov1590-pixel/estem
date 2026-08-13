@@ -1,0 +1,37 @@
+﻿/* SL03: Swiper Slider с прогресс-баром */
+.sl03-container {
+  width: 100%;
+  height: clamp(300px, 40vw, 500px);
+  position: relative;
+  overflow: hidden;
+  border-radius: clamp(16px, 2vw, 24px);
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: var(--color-accent, #00C6B5) !important;
+}
+.sl03-container .swiper-button-next,
+.sl03-container .swiper-button-prev {
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  width: clamp(40px, 4vw, 56px);
+  height: clamp(40px, 4vw, 56px);
+  border-radius: 50%;
+  
+  transition: background 0.3s ease;
+}
+.sl03-container .swiper-button-next:after,
+.sl03-container .swiper-button-prev:after {
+  font-size: clamp(16px, 1.5vw, 20px);
+}
+.sl03-container .swiper-button-next:hover,
+.sl03-container .swiper-button-prev:hover {
+  background: var(--color-accent, #00C6B5);
+}
+.sl03-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+

@@ -1,0 +1,883 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Наши врачи | Estem Clinic</title>
+  <meta name="description"
+    content="Команда врачей премиальной клиники Estem. Узкопрофильные специалисты с международным опытом: хирурги, имплантологи, ортопеды и гнатологи.">
+  
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  
+  <link rel="stylesheet" href="css/global.css?v=1.2">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/doctors.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      
+      <!-- Логотип -->
+      <a href="index.html" class="header-logo">
+        <img src="img/elements/logo.png" alt="Estem Стоматологическая клиника" class="logo-img">
+      </a>
+
+      <!-- Десктопная навигация -->
+      <nav class="header-nav">
+        <ul class="nav-list">
+
+          <!-- Мега-меню «Услуги» -->
+          <li class="nav-item has-dropdown" id="services-dropdown">
+            <button class="nav-link nav-link--btn" aria-expanded="false" aria-controls="mega-curtain">
+              Услуги
+              <svg class="chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </li>
+
+          <li class="nav-item"><a href="doctors.html" class="nav-link active">Врачи</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">О клинике</a></li>
+          <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- Действия -->
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <a href="#" class="lang-link active">RU</a>
+          <span class="lang-sep">|</span>
+          <a href="#" class="lang-link" onclick="alert('Казахская версия сайта находится в разработке.'); return false;">KZ</a>
+        </div>
+        <a href="tel:+77786380664" class="header-phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </a>
+        <button class="btn btn-header-cta" data-modal="appointmentModal">Получить консультацию</button>
+        <button class="burger-menu" id="burger-menu" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== CURTAIN MEGA MENU ===== -->
+    <div class="mega-curtain" id="mega-curtain">
+      <div class="container">
+        <div class="curtain-inner">
+
+                    <!-- Col 1 -->
+          <div class="curtain-col">
+            <p class="curtain-label">Лечение</p>
+            <ul class="curtain-links">
+              <li><a href="therapy/therapy.html"><div style="display: flex; flex-direction: column;"><span>Терапия</span><span style="font-size: 13px; font-weight: 400; opacity: 0.7; display: block; margin-top: 2px;">Кариес и каналы</span></div></a></li>
+              <li><a href="implants/implants.html"><div style="display: flex; flex-direction: column;"><span>Хирургия и Имплантация</span><span style="font-size: 13px; font-weight: 400; opacity: 0.7; display: block; margin-top: 2px;">Удаление и импланты</span></div></a></li>
+              <li><a href="orthopedics/orthopedics.html"><div style="display: flex; flex-direction: column;"><span>Протезирование</span><span style="font-size: 13px; font-weight: 400; opacity: 0.7; display: block; margin-top: 2px;">Коронки и мосты</span></div></a></li>
+              <li><a href="gnathology/gnathology.html"><div style="display: flex; flex-direction: column;"><span>Гнатология</span><span style="font-size: 13px; font-weight: 400; opacity: 0.7; display: block; margin-top: 2px;">ВНЧС и суставы</span></div></a></li>
+            </ul>
+          </div>
+
+          <!-- Col 2 -->
+          <div class="curtain-col">
+            <p class="curtain-label">Эстетика и Профилактика</p>
+            <ul class="curtain-links">
+              <li><a href="veneering/veneering.html"><div style="display: flex; flex-direction: column;"><span>Виниринг</span><span style="font-size: 13px; font-weight: 400; opacity: 0.7; display: block; margin-top: 2px;">Керамические виниры</span></div></a></li>
+              <li><a href="orthodontics/orthodontics.html"><div style="display: flex; flex-direction: column;"><span>Ортодонтия</span><span style="font-size: 13px; font-weight: 400; opacity: 0.7; display: block; margin-top: 2px;">Брекеты и элайнеры</span></div></a></li>
+              <li><a href="aesthetic/aesthetic.html"><div style="display: flex; flex-direction: column;"><span>Гигиена и Отбеливание</span><span style="font-size: 13px; font-weight: 400; opacity: 0.7; display: block; margin-top: 2px;">Профчистка и ZOOM 4</span></div></a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: CTA -->
+          <div class="curtain-col curtain-col--cta">
+            <div class="curtain-cta-card">
+              <span class="cta-badge">Онлайн за 1 мин</span>
+              <h4>Узнайте стоимость лечения</h4>
+              <p>Пройдите короткий квиз - врач подготовит предварительный план и&nbsp;стоимость.</p>
+              <button class="btn btn-header-cta btn--sm" data-modal="quizModal">Пройти квиз</button>
+            </div>
+          </div>
+
+          <!-- Col 4: All services link -->
+          <div class="curtain-col curtain-col--all">
+            <a href="services.html" class="all-services-link">
+              Все услуги
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE MENU ==================== -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu__inner">
+
+      <!-- Nav -->
+      <nav class="mobile-nav">
+        <ul class="mobile-nav__list">
+          <li>
+            <button class="mobile-nav__toggle" aria-expanded="false">
+              Услуги
+              <svg class="chevron-icon" width="12" height="7" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="mobile-sub">
+              <li><a href="therapy/therapy.html">Терапия</a></li>
+              <li><a href="implants/implants.html">Имплантация</a></li>
+              <li><a href="orthopedics/orthopedics.html">Протезирование</a></li>
+              <li><a href="gnathology/gnathology.html">Гнатология</a></li>
+              <li><a href="veneering/veneering.html">Виниринг</a></li>
+              <li><a href="orthodontics/orthodontics.html">Ортодонтия</a></li>
+              <li><a href="aesthetic/aesthetic.html">Эстетика</a></li>
+              <li><a href="services.html" class="mobile-sub__all">Все услуги →</a></li>
+            </ul>
+          </li>
+          <li><a href="doctors.html">Врачи</a></li>
+          <li><a href="about.html">О клинике</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- Bottom info -->
+      <div class="mobile-menu__bottom">
+        <a href="tel:+77786380664" class="mobile-menu__phone">+7 778 638 06 64</a>
+        <a href="https://wa.me/77471634240" class="btn btn-primary w-full">WhatsApp</a>
+        <p class="mobile-menu__hours">Ежедневно 10:00–20:00</p>
+      </div>
+    </div>
+  </div>
+
+
+  <main class="page-content doctors-page">
+    
+    <!-- ====== HERO ====== -->
+    <section class="doctors-hero reveal">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Главная</a>
+          <span class="breadcrumbs-sep">/</span>
+          <span class="breadcrumbs-current">Врачи</span>
+        </div>
+        <span class="section-badge">Специалисты Estem</span>
+        <h1 class="section-title">Наша команда</h1>
+        <p class="section-subtitle">Доверяйте свою улыбку врачам с международным опытом и постоянным повышением квалификации.</p>
+        
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">15+</span>
+            <span class="stat-text">Лет суммарного<br>опыта</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">10k+</span>
+            <span class="stat-text">Довольных<br>пациентов</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-text">Международные<br>протоколы</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DOCTORS LIST ====== -->
+    <section class="doctors-section">
+      <div class="container">
+        <div class="doctors-list" style="display: flex; flex-direction: column; gap: 40px;">
+
+          <!-- ADILKHAN -->
+          <div class="doctor-profile reveal" style="background: var(--color-white); border-radius: var(--radius-card); box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden;">
+            <div class="doctor-profile__left">
+              <img loading="lazy" src="img/doctors/doctor_adilkhan.png" alt="Бейсенбай Адильхан" class="doctor-profile__image">
+            </div>
+            <div class="doctor-profile__right">
+              <!-- Брендовый элемент -->
+              <img loading="lazy" src="img/elements/adv_shape_navy.png" alt="" class="doc-shape doc-shape--navy" aria-hidden="true">
+              <h2 class="doctor-profile__name">Бейсенбай Адильхан Бейсенбаевич</h2>
+              <span class="doctor-profile__spec">Челюстно-лицевой хирург, имплантолог</span>
+              
+              <div class="doctor-skills">
+                <span class="skill-tag">Костная пластика</span>
+                <span class="skill-tag">Удаление зубов мудрости</span>
+                <span class="skill-tag">All-on-4/6</span>
+                <span class="skill-tag">Дентальная имплантация</span>
+              </div>
+              
+              <div class="doctor-profile__stats">
+                <div class="stat-item">
+                  <h5>Опыт работы</h5>
+                  <p>Более 8 лет</p>
+                </div>
+                <div class="stat-item">
+                  <h5>Пациентов</h5>
+                  <p>1000+</p>
+                </div>
+              </div>
+              
+              <p class="doctor-profile__bio">Опытный специалист в области сложного удаления зубов, костной пластики и дентальной имплантации. Регулярно проходит стажировки за рубежом и работает по международным протоколам.</p>
+              
+              <div class="doctor-education">
+                <h3 style="margin-top: 20px;">Сертификаты и курсы</h3>
+                <ul class="education-list">
+                  <li><strong>ALL IN ONE - NEOARCH®</strong><br>Спикер: Dr. Maxim Baini (Neodent®) | Астана, 2024</li>
+                  <li><strong>«Тотальная реабилитация на 4 и 6 имплантатах»</strong><br>Лектор: Егор Кульгавчук (Stom Supply) | Астана, 2023</li>
+                  <li><strong>ALL ON 4-6 ОТ ПРОСТОГО К СЛОЖНОМУ</strong><br>Лектор: Маканов Н.К. (Love Dent) | Астана, 2025</li>
+                  <li><strong>Prevention and Management of Biological Complications in Implant Dentistry</strong><br>Спикер: Prof. Giovanni E. Salvi (Straumann®) | Астана, 2023</li>
+                </ul>
+              </div>
+              
+              <div class="doctor-action">
+                <button type="button" class="btn-book" onclick="openDoctorModal(this)">Записаться к специалисту</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- AKNIET -->
+          <div class="doctor-profile reveal" style="background: var(--color-white); border-radius: var(--radius-card); box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden;">
+            <div class="doctor-profile__left">
+              <img loading="lazy" src="img/doctors/doctor_akniet.png" alt="Сержанов Акниет" class="doctor-profile__image">
+            </div>
+            <div class="doctor-profile__right">
+              <!-- Брендовый элемент -->
+              <img loading="lazy" src="img/elements/adv_shape_teal.png" alt="" class="doc-shape doc-shape--teal" aria-hidden="true">
+              <h2 class="doctor-profile__name">Сержанов Акниет Кайроллаевич</h2>
+              <span class="doctor-profile__spec">Хирург-имплантолог</span>
+              
+              <div class="doctor-skills">
+                <span class="skill-tag">Удаление зубов</span>
+                <span class="skill-tag">Премиальные имплантаты</span>
+                <span class="skill-tag">Навигационная хирургия</span>
+              </div>
+              
+              <div class="doctor-profile__stats">
+                <div class="stat-item">
+                  <h5>Опыт работы</h5>
+                  <p>Более 6 лет</p>
+                </div>
+              </div>
+              
+              <p class="doctor-profile__bio">Врач-хирург высокой квалификации. Специализируется на атравматичном удалении зубов, установке премиальных имплантатов и навигационной хирургии.</p>
+              
+              <div class="doctor-education">
+                <h3 style="margin-top: 20px;">Сертификаты и курсы</h3>
+                <ul class="education-list">
+                  <li><strong>Dental photography. Minimum theory, maximum practice</strong><br>Лектор: Dr. Tubayev Nursultan | 2024</li>
+                  <li><strong>Восстановление функции и эстетики у пациентов с частичным и полным отсутствием зубов</strong><br>Лекторы: Арслан Амиров, Гамид Насуев | Алматы, 2025</li>
+                  <li><strong>Применение аппарата седации в стоматологии</strong><br>NRT Центр эстетической стоматологии и косметологии | Астана</li>
+                  <li><strong>Планирование ортопедического лечения. Препарирование зубов для изготовления керамических реставраций</strong><br>Лектор: Али Байрамбеков (AS Academy) | Алматы, 2025</li>
+                </ul>
+              </div>
+              
+              <div class="doctor-action">
+                <button type="button" class="btn-book" onclick="openDoctorModal(this)">Записаться к специалисту</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- AYAULYM -->
+          <div class="doctor-profile reveal" style="background: var(--color-white); border-radius: var(--radius-card); box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden;">
+            <div class="doctor-profile__left">
+              <img loading="lazy" src="img/doctors/doctor_ayaulym.png" alt="Калджанова Аяулым" class="doctor-profile__image">
+            </div>
+            <div class="doctor-profile__right">
+              <!-- Брендовый элемент -->
+              <img loading="lazy" src="img/elements/adv_shape_orange.png" alt="" class="doc-shape doc-shape--orange" aria-hidden="true">
+              <h2 class="doctor-profile__name">Калджанова Аяулым Ибадуллаевна</h2>
+              <span class="doctor-profile__spec">Ортодонт-гнатолог</span>
+              
+              <div class="doctor-skills">
+                <span class="skill-tag">Брекет-системы</span>
+                <span class="skill-tag">Элайнеры</span>
+                <span class="skill-tag">Лечение ВНЧС</span>
+                <span class="skill-tag">Исправление прикуса</span>
+              </div>
+              
+              <div class="doctor-profile__stats">
+                <div class="stat-item">
+                  <h5>Опыт работы</h5>
+                  <p>Более 7 лет</p>
+                </div>
+              </div>
+              
+              <p class="doctor-profile__bio">Эксперт по исправлению прикуса и работе с суставами ВНЧС. Создает гармоничные улыбки с помощью современных брекет-систем и элайнеров.</p>
+              
+              <div class="doctor-education">
+                <h3 style="margin-top: 20px;">Образование и дипломы</h3>
+                <ul class="education-list">
+                  <li><strong>Врач-стоматолог общей практики (Интернатура)</strong><br>НАО «Медицинский университет Семей» | 2025</li>
+                  <li><strong>Бакалавр здравоохранения (Стоматология)</strong><br>НАО «Медицинский университет Семей» | 2024</li>
+                </ul>
+                <h3 style="margin-top: 20px;">Сертификаты и курсы</h3>
+                <ul class="education-list">
+                  <li><strong>Офис курс «Элайнеры»</strong><br>Лектор: Баянбаев Расул Саматович (Tengrialign)</li>
+                  <li><strong>Диагностика в ортодонтии (Модуль 1)</strong><br>Лектор: Елена Ким (Kim Elena's Dental Centre) | Алматы, 2025</li>
+                  <li><strong>Брекеты. Дуги. Этапы лечения. Перемещение зубов. Ретенция (Модуль 2)</strong><br>Лектор: Елена Ким | Алматы, 2025</li>
+                  <li><strong>Виды малокклюзий. Способы их лечения (Модуль 3)</strong><br>Лектор: Елена Ким | Алматы, 2026</li>
+                  <li><strong>Лечение детей в сменном прикусе (Модуль 4)</strong><br>Лектор: Елена Ким | Алматы, 2026</li>
+                  <li><strong>Микроимпланты в ортодонтии (Модуль 5)</strong><br>Лектор: Елена Ким | Алматы, 2026</li>
+                </ul>
+              </div>
+              
+              <div class="doctor-action">
+                <button type="button" class="btn-book" onclick="openDoctorModal(this)">Записаться к специалисту</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MERUERT -->
+          <div class="doctor-profile reveal" style="background: var(--color-white); border-radius: var(--radius-card); box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden;">
+            <div class="doctor-profile__left">
+              <img loading="lazy" src="img/doctors/doctor_meruert.png" alt="Мұсаева Меруерт" class="doctor-profile__image">
+            </div>
+            <div class="doctor-profile__right">
+              <!-- Брендовый элемент -->
+              <img loading="lazy" src="img/elements/adv_shape_navy.png" alt="" class="doc-shape doc-shape--navy" aria-hidden="true">
+              <h2 class="doctor-profile__name">Мұсаева Меруерт Жұмаханқызы</h2>
+              <span class="doctor-profile__spec">Пародонтолог-гигиенист</span>
+              
+              <div class="doctor-skills">
+                <span class="skill-tag">Лечение десен</span>
+                <span class="skill-tag">Профессиональная гигиена</span>
+                <span class="skill-tag">Пародонтология</span>
+                <span class="skill-tag">Vector-терапия</span>
+              </div>
+              
+              <div class="doctor-profile__stats">
+                <div class="stat-item">
+                  <h5>Опыт работы</h5>
+                  <p>Более 5 лет</p>
+                </div>
+              </div>
+              
+              <p class="doctor-profile__bio">Специалист по здоровью десен и профессиональной гигиене. Помогает сохранить здоровье полости рта и предотвратить развитие серьезных заболеваний пародонта.</p>
+              
+              <div class="doctor-education">
+                <h3 style="margin-top: 20px;">Сертификаты и курсы</h3>
+                <ul class="education-list">
+                  <li><strong>Введение в консервативную пародонтологию. Профессиональная гигиена полости рта</strong><br>Лектор: Байжанов Д.А. (Dr. D) | Астана, 2026</li>
+                </ul>
+              </div>
+              
+              <div class="doctor-action">
+                <button type="button" class="btn-book" onclick="openDoctorModal(this)">Записаться к специалисту</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- NURAIM -->
+          <div class="doctor-profile reveal" style="background: var(--color-white); border-radius: var(--radius-card); box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden;">
+            <div class="doctor-profile__left">
+              <img loading="lazy" src="img/doctors/doctor_nuraim.png" alt="Кыдырманова Нураим" class="doctor-profile__image">
+            </div>
+            <div class="doctor-profile__right">
+              <!-- Брендовый элемент -->
+              <img loading="lazy" src="img/elements/adv_shape_teal.png" alt="" class="doc-shape doc-shape--teal" aria-hidden="true">
+              <h2 class="doctor-profile__name">Кыдырманова Нураим Данияровна</h2>
+              <span class="doctor-profile__spec">Стоматолог-терапевт</span>
+              
+              <div class="doctor-skills">
+                <span class="skill-tag">Лечение под микроскопом</span>
+                <span class="skill-tag">Художественная реставрация</span>
+                <span class="skill-tag">Эндодонтия</span>
+              </div>
+              
+              <div class="doctor-profile__stats">
+                <div class="stat-item">
+                  <h5>Опыт работы</h5>
+                  <p>Более 9 лет</p>
+                </div>
+              </div>
+              
+              <p class="doctor-profile__bio">Мастер художественной реставрации и эндодонтического лечения (лечение каналов под микроскопом). Спасает даже самые сложные зубы.</p>
+              
+              <div class="doctor-education">
+                <h3 style="margin-top: 20px;">Образование и дипломы</h3>
+                <ul class="education-list">
+                  <li><strong>Дантист (Стоматология)</strong><br>Медико-технический колледж | Астана, 2023</li>
+                </ul>
+                <h3 style="margin-top: 20px;">Сертификаты и курсы</h3>
+                <ul class="education-list">
+                  <li><strong>Функционально-эстетическая реставрация боковых зубов</strong><br>Лектор: Шатаев Жомарт (Tokuyama Dental) | Астана, 2025</li>
+                </ul>
+              </div>
+              
+              <div class="doctor-action">
+                <button type="button" class="btn-book" onclick="openDoctorModal(this)">Записаться к специалисту</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SABINA -->
+          <div class="doctor-profile reveal" style="background: var(--color-white); border-radius: var(--radius-card); box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden;">
+            <div class="doctor-profile__left">
+              <img loading="lazy" src="img/doctors/doctor_sabina.png" alt="Норжигитова Сабина" class="doctor-profile__image">
+            </div>
+            <div class="doctor-profile__right">
+              <!-- Брендовый элемент -->
+              <img loading="lazy" src="img/elements/adv_shape_orange.png" alt="" class="doc-shape doc-shape--orange" aria-hidden="true">
+              <h2 class="doctor-profile__name">Норжигитова Сабина Динмухамедовна</h2>
+              <span class="doctor-profile__spec">Ортодонт</span>
+              
+              <div class="doctor-skills">
+                <span class="skill-tag">Детская ортодонтия</span>
+                <span class="skill-tag">Брекеты</span>
+                <span class="skill-tag">Исправление прикуса</span>
+              </div>
+              
+              <div class="doctor-profile__stats">
+                <div class="stat-item">
+                  <h5>Опыт работы</h5>
+                  <p>Более 6 лет</p>
+                </div>
+              </div>
+              
+              <p class="doctor-profile__bio">Врач-ортодонт, работающий с детьми и взрослыми. Помогает обрести ровные зубы и правильный прикус с использованием передовых технологий.</p>
+              
+              <div class="doctor-education">
+                <h3 style="margin-top: 20px;">Образование и дипломы</h3>
+                <ul class="education-list">
+                  <li><strong>Врач-стоматолог общей практики</strong><br>НАО «Медицинский университет Астана» | Астана, 2025</li>
+                  <li><strong>Сертификат специалиста (Стоматолог общей практики)</strong><br>Министерство здравоохранения РК | Астана, 2025</li>
+                </ul>
+                <h3 style="margin-top: 20px;">Сертификаты и курсы</h3>
+                <ul class="education-list">
+                  <li><strong>Наставничество по ортодонтии (Полный курс)</strong><br>Наставник: Алнысбай Лейла Азаматовна | 2025</li>
+                  <li><strong>Конгресс «Нестандартная стоматология. Мнение экспертов»</strong><br>Astana Medical University & IMTC | 2024</li>
+                </ul>
+              </div>
+              
+              <div class="doctor-action">
+                <button type="button" class="btn-book" onclick="openDoctorModal(this)">Записаться к специалисту</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- DAUREN -->
+          <div class="doctor-profile reveal" style="background: var(--color-white); border-radius: var(--radius-card); box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden;">
+            <div class="doctor-profile__left">
+              <img loading="lazy" src="img/doctors/doctor_dauren.png" alt="Даурен Серикович" class="doctor-profile__image">
+            </div>
+            <div class="doctor-profile__right">
+              <!-- Брендовый элемент -->
+              <img loading="lazy" src="img/elements/adv_shape_navy.png" alt="" class="doc-shape doc-shape--navy" aria-hidden="true">
+              <h2 class="doctor-profile__name">Даурен Серикович</h2>
+              <span class="doctor-profile__spec">Стоматолог-ортопед</span>
+              
+              <div class="doctor-skills">
+                <span class="skill-tag">Виниры</span>
+                <span class="skill-tag">Коронки</span>
+                <span class="skill-tag">Эстетическое протезирование</span>
+              </div>
+              
+              <div class="doctor-profile__stats">
+                <div class="stat-item">
+                  <h5>Опыт работы</h5>
+                  <p>Более 7 лет</p>
+                </div>
+              </div>
+              
+              <p class="doctor-profile__bio">Специализируется на эстетическом протезировании, установке керамических виниров и коронок. Возвращает функциональность и красоту улыбки.</p>
+              
+              <div class="doctor-certs-text">
+                <p style="color:var(--color-gray-text); font-size:14px; font-style:italic;">Информация о сертификатах скоро будет добавлена...</p>
+              </div>
+              
+              <div class="doctor-action">
+                <button type="button" class="btn-book" onclick="openDoctorModal(this)">Записаться к специалисту</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ZHAKSYLYK -->
+          <div class="doctor-profile reveal" style="background: var(--color-white); border-radius: var(--radius-card); box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden;">
+            <div class="doctor-profile__left">
+              <img loading="lazy" src="img/doctors/doctor_zhaksylyk.png" alt="Жаксылык Абдужалалов" class="doctor-profile__image">
+            </div>
+            <div class="doctor-profile__right">
+              <!-- Брендовый элемент -->
+              <img loading="lazy" src="img/elements/adv_shape_teal.png" alt="" class="doc-shape doc-shape--teal" aria-hidden="true">
+              <h2 class="doctor-profile__name">Жаксылык Абдужалалов</h2>
+              <span class="doctor-profile__spec">Главный врач</span>
+              
+              <div class="doctor-skills">
+                <span class="skill-tag">Лечение кариеса</span>
+                <span class="skill-tag">Реставрация</span>
+                <span class="skill-tag">Профгигиена</span>
+              </div>
+              
+              <div class="doctor-profile__stats">
+                <div class="stat-item">
+                  <h5>Опыт работы</h5>
+                  <p>Более 5 лет</p>
+                </div>
+              </div>
+              
+              <p class="doctor-profile__bio">Владеет современными методиками безболезненного удаления зубов мудрости и подготовки полости рта к дальнейшему протезированию.</p>
+              
+              <div class="doctor-certs-text">
+                <p style="color:var(--color-gray-text); font-size:14px; font-style:italic;">Информация о сертификатах скоро будет добавлена...</p>
+              </div>
+              
+              <div class="doctor-action">
+                <button type="button" class="btn-book" onclick="openDoctorModal(this)">Записаться к специалисту</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+
+
+
+  <!-- ====== PREMIUM MAP & CONTACTS ====== -->
+  <section class="footer-map-premium">
+    <div class="container">
+      <div class="map-premium__wrapper">
+        <div class="map-premium__iframe" style="position: relative;">
+          <div id="index-map" style="width:100%; height:100%; filter: grayscale(1) invert(0.9) hue-rotate(180deg);"></div>
+          <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+          <script>
+            DG.then(function () {
+                var map = DG.map('index-map', {
+                    center: [51.128252, 71.461367],
+                    zoom: 16,
+                    scrollWheelZoom: false
+                });
+                DG.marker([51.128252, 71.461367]).addTo(map).bindPopup('Estem Dental Clinic');
+            });
+          </script>
+        </div>
+        
+        <!-- Floating Glass Card -->
+        <div class="map-premium__glass-card">
+          <h3 class="glass-card__title">Контакты клиники</h3>
+          
+          <div class="glass-card__row">
+            <img loading="lazy" src="img/elements/icon_location.png" alt="Адрес" class="glass-icon">
+            <div class="glass-text">
+              <span>Адрес</span>
+              <a href="https://go.2gis.com/WcZNY" target="_blank">Астана, пр. Ракымжан Кошкарбаев, 2</a>
+            </div>
+          </div>
+          
+          <div class="glass-card__row">
+            <img loading="lazy" src="img/elements/icon_heart.png" alt="График" class="glass-icon">
+            <div class="glass-text">
+              <span>Режим работы</span>
+              <p>10:00 – 20:00 (Ежедневно)</p>
+            </div>
+          </div>
+          
+          <div class="glass-card__row">
+            <img loading="lazy" src="img/elements/icon_phone2.png" alt="Телефон" class="glass-icon">
+            <div class="glass-text">
+              <span>Телефон</span>
+              <a href="tel:+77786380664" class="glass-phone">+7 778 638 06 64</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer-clean">
+    <div class="container">
+      <div class="footer-clean__grid">
+        <div class="fc-brand">
+          <a href="index.html" class="fc-logo"><img src="img/elements/logo.png" alt="Estem"></a>
+          <p>Премиальная стоматология полного цикла.</p>
+          <div class="fc-socials-custom">
+            <a href="https://wa.me/77471634240" target="_blank" aria-label="WhatsApp"><img loading="lazy" src="img/elements/icon_whatsapp.png" alt="WhatsApp"></a>
+            <a href="https://www.instagram.com/estem_astana/" target="_blank" aria-label="Instagram"><img loading="lazy" src="img/elements/icon_instagram.png" alt="Instagram"></a>
+          </div>
+        </div>
+        
+                <div class="fc-nav">
+          <h4 class="fc-title">Лечение</h4>
+          <ul>
+            <li><a href="therapy/therapy.html">Терапия</a></li>
+            <li><a href="implants/implants.html">Хирургия и Имплантация</a></li>
+            <li><a href="orthopedics/orthopedics.html">Протезирование</a></li>
+            <li><a href="gnathology/gnathology.html">Гнатология</a></li>
+          </ul>
+        </div>
+        
+        <div class="fc-nav">
+          <h4 class="fc-title">Эстетика</h4>
+          <ul>
+            <li><a href="veneering/veneering.html">Виниринг</a></li>
+            <li><a href="orthodontics/orthodontics.html">Ортодонтия</a></li>
+            <li><a href="aesthetic/aesthetic.html">Гигиена и Отбеливание</a></li>
+            <li><a href="doctors.html">Наши врачи</a></li>
+          </ul>
+        </div>
+        
+        <div class="fc-nav">
+          <h4 class="fc-title">Пациентам</h4>
+          <ul>
+            <li><a href="about.html">О клинике</a></li>
+            <li><a href="privacy-policy.html">Конфиденциальность</a></li>
+            <li><a href="public-offer.html">Публичная оферта</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-clean__bottom">
+        <p>© 2026 Estem Dental Clinic. Все права защищены.</p>
+        <a href="https://rustcodes.vercel.app/" target="_blank" class="fc-developer">Разработка сайта - Rustcodes</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== APPOINTMENT MODAL ==================== -->
+  <div class="modal-overlay" id="appointmentModal">
+    <div class="modal modal--split">
+      <button class="modal-close" aria-label="Закрыть">&times;</button>
+      
+      <div class="modal-inner">
+        <!-- Photo/Left side -->
+        <div class="modal-photo">
+          <img loading="lazy" src="img/doctors/lead.png" alt="Запись на прием">
+        </div>
+        
+        <!-- Form/Right side -->
+        <div class="modal-form-side">
+          
+          <div class="modal-body" id="modalAppointmentBodyView">
+            <div class="modal-header">
+              <span class="modal-badge">Запись на прием</span>
+              <h3 class="modal-title">Оставьте заявку</h3>
+              <p class="modal-subtitle">Мы перезвоним вам в течение 5 минут для согласования удобного времени визита.</p>
+            </div>
+
+            <form id="modalAppointmentForm" class="modal-form" novalidate>
+              <div class="field" id="doctorFieldContainer" style="display: none;">
+                <label style="font-size: 13px; color: var(--color-primary); opacity: 0.7; margin-bottom: 6px; display: block;">Выбранный специалист</label>
+                <input type="text" class="field-input" id="modalAppointmentDoctor" name="doctor" readonly style="background: var(--color-gray-bg); font-weight: 500; color: var(--color-primary); border: 1px solid rgba(23,37,53,0.1); cursor: default;">
+              </div>
+
+              <div class="field">
+                <input type="text" class="field-input" id="modalAppointmentName" name="name" placeholder="Ваше имя" autocomplete="given-name" required>
+              </div>
+
+              <div class="field">
+                <div class="field-phone">
+                  <span class="phone-prefix">🇰🇿 +7</span>
+                  <input type="tel" class="field-input" id="modalAppointmentPhone" name="phone" placeholder="(7XX) XXX XX XX" inputmode="tel" autocomplete="tel" maxlength="15" required>
+                </div>
+              </div>
+
+              <label class="consent">
+                <input type="checkbox" class="consent-checkbox" id="modalAppointmentConsent" required checked>
+                <span class="consent-text">Соглашаюсь на <a href="privacy-policy.html" target="_blank">обработку персональных данных</a></span>
+              </label>
+
+              <button type="submit" class="btn-submit" id="modalAppointmentSubmitBtn" disabled>Записаться</button>
+            </form>
+          </div>
+          
+          <!-- Success View for Appointment -->
+          <div class="modal-success" id="modalAppointmentSuccessView">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3 class="success-title">Спасибо за заявку!</h3>
+            <p class="success-text">Наш администратор свяжется с вами<br>в ближайшее время.</p>
+            <button class="success-close-btn" type="button">Закрыть</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== QUIZ MODAL ==================== -->
+  <div class="modal-overlay" id="quizModal">
+    <div class="modal modal--split">
+      <button class="modal-close" aria-label="Закрыть">&times;</button>
+
+      <div class="modal-inner">
+        <!-- Photo/Left side for Quiz -->
+        <div class="modal-photo">
+          <img loading="lazy" src="img/doctors/lead.png" alt="Пройти квиз">
+        </div>
+
+        <div class="modal-form-side">
+          <div class="modal-body" id="modalQuizBodyView">
+            <div class="quiz-progress-top">
+              <button type="button" class="quiz-back-btn" id="modalQuizBackBtn" style="display: none;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                Назад
+              </button>
+              <div class="quiz-progress">
+                <div class="quiz-progress-bar-bg">
+                  <div class="quiz-progress-bar" id="modalQuizProgressBar" style="width: 33%;"></div>
+                </div>
+                <div class="quiz-progress-text">Шаг <span id="modalQuizCurrentStep">1</span> из 3</div>
+              </div>
+            </div>
+
+            <form id="modalQuizForm" class="quiz-form" novalidate>
+              <!-- STEP 1 -->
+              <div class="quiz-step active" data-step="1">
+                <h3 class="quiz-step-title">Что вас беспокоит?</h3>
+                <div class="quiz-options grid-1">
+                  <label class="quiz-option">
+                    <input type="radio" name="quiz_concern" value="Боль">
+                    <div class="quiz-option-inner quiz-option-inner--row">
+                      <span class="quiz-option-text">Острая или ноющая боль</span>
+                    </div>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="quiz_concern" value="Эстетика">
+                    <div class="quiz-option-inner quiz-option-inner--row">
+                      <span class="quiz-option-text">Хочу красивую улыбку (эстетика)</span>
+                    </div>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="quiz_concern" value="Отсутствие зуба">
+                    <div class="quiz-option-inner quiz-option-inner--row">
+                      <span class="quiz-option-text">Отсутствует один или несколько зубов</span>
+                    </div>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="quiz_concern" value="Профилактика">
+                    <div class="quiz-option-inner quiz-option-inner--row">
+                      <span class="quiz-option-text">Просто плановый осмотр / чистка</span>
+                    </div>
+                  </label>
+                </div>
+                <button type="button" class="btn-submit quiz-next-btn" disabled>Далее</button>
+              </div>
+
+              <!-- STEP 2 -->
+              <div class="quiz-step" data-step="2">
+                <h3 class="quiz-step-title">Когда планируете начать лечение?</h3>
+                <div class="quiz-options grid-1">
+                  <label class="quiz-option">
+                    <input type="radio" name="quiz_timeline" value="Как можно скорее">
+                    <div class="quiz-option-inner quiz-option-inner--row">
+                      <span class="quiz-option-text">Как можно скорее</span>
+                    </div>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="quiz_timeline" value="В течение месяца">
+                    <div class="quiz-option-inner quiz-option-inner--row">
+                      <span class="quiz-option-text">В течение месяца</span>
+                    </div>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="quiz_timeline" value="Пока прицениваюсь">
+                    <div class="quiz-option-inner quiz-option-inner--row">
+                      <span class="quiz-option-text">Пока просто узнаю цены</span>
+                    </div>
+                  </label>
+                </div>
+                <button type="button" class="btn-submit quiz-next-btn" disabled>Далее</button>
+              </div>
+
+              <!-- STEP 3 (Form) -->
+              <div class="quiz-step" data-step="3">
+                <h3 class="quiz-step-title">Куда прислать расчет стоимости?</h3>
+                <div class="modal-form">
+                  <div class="field">
+                    <input type="text" class="field-input" id="modalQuizName" name="name" placeholder="Ваше имя" autocomplete="given-name" required>
+                  </div>
+                  <div class="field">
+                    <div class="field-phone">
+                      <span class="phone-prefix">🇰🇿 +7</span>
+                      <input type="tel" class="field-input" id="modalQuizPhone" name="phone" placeholder="(7XX) XXX XX XX" inputmode="tel" autocomplete="tel" maxlength="15" required>
+                    </div>
+                  </div>
+                  <label class="consent">
+                    <input type="checkbox" class="consent-checkbox" id="modalQuizConsent" required checked>
+                    <span class="consent-text">Соглашаюсь на <a href="privacy-policy.html" target="_blank">обработку персональных данных</a></span>
+                  </label>
+                  <button type="submit" class="btn-submit" id="modalQuizSubmitBtn" disabled>Получить расчет</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Success View for Quiz -->
+          <div class="modal-success" id="modalQuizSuccessView">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3 class="success-title">Спасибо за ответы!</h3>
+            <p class="success-text">Наш врач уже изучает их.<br>Мы свяжемся с вами в ближайшее время!</p>
+            <button class="success-close-btn" type="button">Закрыть</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== WHATSAPP FAB ==================== -->
+  <a href="https://wa.me/77471634240" target="_blank" class="whatsapp-fab" id="whatsappFab" aria-label="Написать в WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <!-- ==================== UP FAB ==================== -->
+  <button class="up-fab" id="upFab" aria-label="Наверх">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="js/main.js?v=1.2"></script>
+  <script src="js/quiz_v2.js"></script>
+  <script>
+    function openDoctorModal(btnElement) {
+      const modal = document.getElementById('appointmentModal');
+      const docInput = document.getElementById('modalAppointmentDoctor');
+      const docContainer = document.getElementById('doctorFieldContainer');
+      
+      let doctorName = 'Специалист';
+      if (btnElement) {
+        const profile = btnElement.closest('.doctor-profile');
+        if (profile) {
+          const nameEl = profile.querySelector('.doctor-profile__name');
+          if (nameEl) doctorName = nameEl.textContent.trim();
+        }
+      }
+
+      if (modal) {
+        if (docInput && docContainer) {
+          docInput.value = doctorName;
+          docContainer.style.display = 'block';
+        }
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        
+        setTimeout(() => {
+          document.getElementById('modalAppointmentPhone')?.focus();
+        }, 100);
+      }
+    }
+  </script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+﻿/* SL04: Прямоугольный гибкий слайдер */
+.sl04-stage {
+  display: flex;
+  width: 100%;
+  height: clamp(300px, 40vw, 500px);
+  gap: 0; /* без отступов, как в оригинале обычно делают прямоугольные блоки */
+  overflow: hidden;
+}
+.sl04-option {
+  position: relative;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  align-items: flex-end;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.sl04-option:last-child {
+  border-right: none;
+}
+.sl04-option::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  transition: background 0.4s ease;
+  z-index: 1;
+}
+.sl04-option.active::after {
+  background: rgba(0,0,0,0.2);
+}
+.sl04-option.active {
+  flex: 4;
+}
+.sl04-content {
+  position: relative;
+  z-index: 2;
+  padding: clamp(16px, 2vw, 24px);
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.sl04-title {
+  margin: 0;
+  font-size: clamp(20px, 2vw, 32px);
+  font-weight: 700;
+  white-space: nowrap;
+  transition: all 0.4s ease;
+}
+.sl04-option:not(.active) .sl04-title {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: clamp(16px, 1.5vw, 24px);
+  margin-bottom: auto;
+}
+.sl04-desc {
+  margin: clamp(8px, 1vw, 12px) 0 0;
+  font-size: clamp(14px, 1vw, 16px);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+.sl04-option.active .sl04-desc {
+  opacity: 1;
+  max-height: 100px; /* Достаточно для описания */
+}
+@media (max-width: 768px) {
+  .sl04-stage {
+    flex-direction: column;
+    height: 70vh;
+  }
+  .sl04-option:not(.active) .sl04-title {
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+}
